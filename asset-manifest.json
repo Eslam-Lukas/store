@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Eslam-Lukas/store.git/static/css/main.b1e1e0ce.css",
+    "main.js": "/Eslam-Lukas/store.git/static/js/main.3d5e248b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Eslam-Lukas/store.git/static/js/787.28cb0dcd.chunk.js",
+    "static/media/whatsapp.png": "/Eslam-Lukas/store.git/static/media/whatsapp.807cf0d84060a9ee2059.png",
+    "static/media/gmail.png": "/Eslam-Lukas/store.git/static/media/gmail.7dae0e0f9362bc6b362a.png",
+    "static/media/Designer _Isometric.png": "/Eslam-Lukas/store.git/static/media/Designer _Isometric.033352ea6f3e37427b82.png",
+    "static/media/linkedin.png": "/Eslam-Lukas/store.git/static/media/linkedin.8b89ce01929a419c5625.png",
+    "static/media/facebook.png": "/Eslam-Lukas/store.git/static/media/facebook.5ce3a1ca8559b4dc0487.png",
+    "index.html": "/Eslam-Lukas/store.git/index.html",
+    "main.b1e1e0ce.css.map": "/Eslam-Lukas/store.git/static/css/main.b1e1e0ce.css.map",
+    "main.3d5e248b.js.map": "/Eslam-Lukas/store.git/static/js/main.3d5e248b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Eslam-Lukas/store.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1e1e0ce.css",
+    "static/js/main.3d5e248b.js"
+  ]
+}
