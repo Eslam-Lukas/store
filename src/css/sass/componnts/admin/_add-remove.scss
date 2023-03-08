@@ -1,0 +1,14 @@
+@use '../../helpers/animation' as *;
+@use '../../helpers/vars' as *;
+@use '../../helpers/mixin' as *;
+@use '../../global' as *;
+
+.control-cont {
+	@extend %pesudo-animation-rotate;
+	height: calc(100vh - 75px);
+
+	.btn-control {
+		@extend .w-st-50;
+		position: relative;
+	}
+}

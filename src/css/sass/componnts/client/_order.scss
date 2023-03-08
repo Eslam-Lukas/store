@@ -1,0 +1,42 @@
+@use '../../global' as *;
+@use '../../helpers/animation' as *;
+@use '../../helpers/mixin' as *;
+@use '../../helpers/vars' as *;
+
+.order-form {
+	// position: relative;
+	// z-index: 3;
+	// padding-bottom: 50px;
+	margin: auto;
+	margin-bottom: 100px !important;
+}
+
+.save-order-btn {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.adress-title {
+	transition: 0.6s !important;
+	overflow: hidden;
+	transition: 2s;
+	margin-bottom: 4px;
+	height: 0;
+	@include pesudo-empty(before, $background-main) {
+		z-index: 1;
+		width: 100%;
+		background-color: $background-main;
+		bottom: 0;
+		height: 100%;
+		transition: 2s;
+		opacity: 1;
+	}
+	&.open {
+		height: 100%;
+		&::before {
+			height: 0;
+			opacity: 0.5;
+		}
+	}
+}

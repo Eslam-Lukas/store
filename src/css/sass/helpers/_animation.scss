@@ -1,0 +1,17 @@
+@use './mixin' as *;
+@include twoFrames(dir-x, width);
+@include twoFrames(dir-y, height);
+@include twoFrames(left-hand, left);
+@include creat-animation(rotate) {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+@include creat-animation(opacityChange) {
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}

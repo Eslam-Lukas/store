@@ -1,0 +1,24 @@
+:root {
+	--background-main: #777;
+	--variant-color: #0d6efd;
+	--color-pesudo-ele: #009688;
+	--color-overlay-light: #77777747;
+	--color-ovelay-desc: #c6c6c6a8;
+	--color-text-close: #213470;
+	--color-text-open: #1277cd;
+	--color-text-desc: #223647;
+}
+
+$background-main: var(--background-main, #777);
+$variant: var(--variant-color, #0d6efd);
+$color-pesudo-ele: var(--color-pesudo-ele, #009688);
+$color-overlay-light: var(--color-overlay-light, #77777747);
+$color-ovelay-desc: var(--color-ovelay-desc, #c6c6c6a8);
+$color-text-close: var(--color-text-close, #213470);
+$color-text-open: var(--color-text-open, #1277cd);
+$color-text-desc: var(--color-text-desc, #223647);
+
+$true-overlay-desc: #c6c6c6a8;
+/*
+var(--color-ovelay-desc, #c6c6c6a8)
+*/

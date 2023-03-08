@@ -1,0 +1,14 @@
+@use './sass/helpers/mixin' as *;
+@use './sass/helpers/funcation' as *;
+@use './sass/helpers/vars' as *;
+@use './sass/helpers/animation' as *;
+@use './sass/global';
+
+@use './sass/componnts/client/home';
+@use './sass/componnts/client/products';
+@use './sass/componnts/client/acive-product';
+@use './sass/componnts/client/navbar';
+@use './sass/componnts/client/order';
+@use './sass/componnts/admin/rigester';
+@use './sass/componnts/admin/add-remove';
+@use './sass/componnts/admin/samry';

@@ -1,0 +1,110 @@
+@use '../../helpers/mixin' as *;
+@use '../../helpers/vars' as *;
+@use '../../global' as *;
+
+.nav-bar {
+	z-index: 1000;
+}
+.nav-link-css {
+	position: relative;
+	overflow: hidden;
+	font-weight: bold !important;
+	text-transform: capitalize;
+	&.btn-filter {
+		border: none;
+		cursor: pointer;
+		@include media('lg', 'max') {
+			background-color: inherit;
+			text-align: left;
+			&:hover {
+				background-color: inherit;
+			}
+		}
+		@include media('lg') {
+			background-color: #f8f9fa;
+			&:hover {
+				background: #f8f9fa;
+			}
+		}
+	}
+	&:hover,
+	&.active {
+		position: relative;
+		padding-left: 10px;
+		@include media('lg', 'max') {
+			@include pesudo-state(after, $width: 50%) {
+				@include animation(left-hand, 2s, $count: 2);
+				animation-name: left-hand, dir-x;
+			}
+			@include pesudo-state(before, $color-pesudo-ele, 3px, left) {
+				height: 100%;
+				@include animation(dir-y, 1s);
+			}
+		}
+		@include media('lg') {
+			padding-top: 0;
+			@include pesudo-state(before) {
+				@include animation(dir-x, 2s);
+			}
+		}
+	}
+	&.active {
+		@include media('lg') {
+			@include pesudo-state(before) {
+				@include animation(dir-x, 2s, ease-in-out, 3);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}
+
+// mb-2 nav-bar navbar navbar-expand-lg navbar-light bg-light
+
+#basic-navbar-nav {
+	padding: 20px;
+	background-color: $color-ovelay-desc;
+	@include media('lg') {
+		padding: 0;
+		background-color: inherit;
+		margin-left: 50px;
+	}
+	position: sticky;
+	top: 0;
+}
+// 575
+// sm 40
+//md 30
+#offcanvasNavbar-expand-filter {
+	padding: 20px;
+	background-color: opacify($color: $true-overlay-desc, $amount: 0.5);
+	width: 55%;
+	@include media('sm') {
+		width: 40%;
+	}
+	@include media('md') {
+		width: 30%;
+	}
+
+	@include media('lg') {
+		padding: 10px;
+		height: max-content !important;
+		justify-content: space-between;
+		flex-flow: row;
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%) !important;
+		top: 57px;
+		width: 25% !important;
+		width: 75% !important;
+		background: inherit !important;
+	}
+	@include media('xl') {
+		width: 75% !important;
+	}
+}
+.close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}

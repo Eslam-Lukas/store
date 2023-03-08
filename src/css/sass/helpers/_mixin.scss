@@ -1,0 +1,115 @@
+@use './vars' as *;
+@mixin media($screen, $state: 'min') {
+	@if ($screen == 'st') {
+		@media (#{$state}-width: 0px) {
+			@content;
+		}
+	} @else if ($screen == 'sm') {
+		@media (#{$state}-width: 576px) {
+			@content;
+		}
+	} @else if ($screen == 'md') {
+		@media (#{$state}-width: 768px) {
+			@content;
+		}
+	} @else if ($screen == 'lg') {
+		@media (#{$state}-width: 992px) {
+			@content;
+		}
+	} @else if ($screen == 'xl') {
+		@media (#{$state}-width: 1200px) {
+			@content;
+		}
+	} @else if ($screen == 'xll') {
+		@media (#{$state}-width: 1400px) {
+			@content;
+		}
+	}
+}
+
+@mixin creat-animation($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin twoFrames($name, $prop, $start: 0, $end: 100%) {
+	@include creat-animation($name) {
+		from {
+			#{$prop}: $start;
+		}
+		to {
+			#{$prop}: $end;
+		}
+	}
+}
+@mixin animation(
+	$name,
+	$dur: 5s,
+	$func: linear,
+	$count: infinite,
+	$direction: alternate,
+	$fill: both,
+	$state: running,
+	$delay: 0s
+) {
+	animation: $name $dur $func $delay $count $direction $fill;
+}
+@mixin pesudo-state(
+	$ele,
+	$color: $color-pesudo-ele,
+	$width: 100%,
+	$dir: bottom,
+	$height: 3px
+) {
+	&::#{$ele} {
+		content: '';
+		position: absolute;
+		width: #{$width};
+		#{$dir}: 0 !important;
+		border-#{$dir}: #{$height} solid #{$color};
+
+		@content;
+	}
+}
+@mixin arrow($direction, $color: $color-pesudo-ele) {
+	content: '';
+	position: absolute;
+	border: 20px solid transparent;
+
+	@if $direction==top {
+		top: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-bottom-color: $color;
+	} @else if $direction==right {
+		top: 50%;
+		transform: translateY(-50%);
+		right: -40px;
+		border-left-color: $color;
+	} @else if $direction==left {
+		top: 50%;
+		transform: translateY(-50%);
+		left: -40px;
+		border-right-color: $color;
+	} @else {
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -40px;
+		border-top-color: $color;
+	}
+}
+@mixin pesudo-empty($ele, $color: $color-pesudo-ele) {
+	&::#{$ele} {
+		content: '';
+		position: absolute;
+		background-color: $color;
+		@content;
+	}
+}

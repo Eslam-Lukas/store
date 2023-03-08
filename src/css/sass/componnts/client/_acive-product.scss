@@ -1,0 +1,26 @@
+@use '../../global' as *;
+@use '../../helpers/mixin' as *;
+@use '../../helpers/vars' as *;
+.cont-active-product {
+	.active-product-carousel {
+		transform: translatey(50%);
+		@include media('lg') {
+			transform: translatex(50%);
+		}
+	}
+	.active-product {
+		transform: translatey(-50%);
+		z-index: -1;
+		background-color: $variant;
+		@include media('lg') {
+			transform: translatex(-50%);
+		}
+	}
+	&:hover {
+		.active-product-carousel,
+		.active-product {
+			transform: translate(0);
+			z-index: 1;
+		}
+	}
+}
